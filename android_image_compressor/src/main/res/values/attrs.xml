@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ImageCompressorView custom attributes -->
+    <declare-styleable name="ImageCompressorView">
+
+        <!-- JPEG compression quality (0-100) -->
+        <attr name="compressQuality" format="integer" />
+
+        <!-- Maximum width for compressed image -->
+        <attr name="compressMaxWidth" format="dimension|integer" />
+
+        <!-- Maximum height for compressed image -->
+        <attr name="compressMaxHeight" format="dimension|integer" />
+
+        <!-- Output format for compressed image -->
+        <attr name="compressFormat" format="enum">
+            <enum name="jpeg" value="0" />
+            <enum name="png" value="1" />
+            <enum name="webp" value="2" />
+        </attr>
+
+        <!-- Automatically rotate image based on EXIF data -->
+        <attr name="autoRotate" format="boolean" />
+
+        <!-- Source image drawable (optional - can also use android:src) -->
+        <attr name="imageSrc" format="reference" />
+
+    </declare-styleable>
+</resources>
