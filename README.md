@@ -10,7 +10,7 @@ It allows developers or users to:
 
 - Resize images while maintaining aspect ratio
 
-- Adjust JPEG quality to reduce file size
+- Adjust JPEG quality from 0 (lowest) to 100 (highest) to reduce file size
 
 - Automatically ensure the compressed file is smaller than the original
 
@@ -76,16 +76,20 @@ dependencies {
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.ext.android_image_compressor.ImageCompressorView
-        android:id="@+id/compressorView"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:scaleType="centerCrop"
-        android:background="#E0E0E0"
-        android:src="@drawable/seen"
-        app:compressQuality="30"
-        app:compressMaxWidth="1080"
-        app:compressMaxHeight="1080"/>
+<com.ext.android_image_compressor.ImageCompressorView
+    android:id="@+id/compressorView"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:scaleType="centerCrop"
+    android:background="#E0E0E0"
+    android:src="@drawable/seen"
+
+    app:compressQuality="30"          <!-- 0 to 100 -->
+    app:compressMaxWidth="1080"       <!-- in pixels -->
+    app:compressMaxHeight="1080"      <!-- in pixels -->
+    app:compressFormat="jpeg"
+    app:autoRotate="true"/>
+
 
     <Button
         android:id="@+id/btnCompress"
